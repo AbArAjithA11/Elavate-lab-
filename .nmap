@@ -1,0 +1,314 @@
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-04 21:34 +0530
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 21:34
+Completed NSE at 21:34, 0.00s elapsed
+Initiating NSE at 21:34
+Completed NSE at 21:34, 0.00s elapsed
+Initiating NSE at 21:34
+Completed NSE at 21:34, 0.00s elapsed
+Initiating ARP Ping Scan at 21:34
+Scanning 192.168.29.1 [1 port]
+Completed ARP Ping Scan at 21:34, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 21:34
+Completed Parallel DNS resolution of 1 host. at 21:34, 0.00s elapsed
+Initiating SYN Stealth Scan at 21:34
+Scanning reliance.reliance (192.168.29.1) [65535 ports]
+Discovered open port 8080/tcp on 192.168.29.1
+Discovered open port 80/tcp on 192.168.29.1
+Discovered open port 443/tcp on 192.168.29.1
+Discovered open port 5068/tcp on 192.168.29.1
+SYN Stealth Scan Timing: About 19.21% done; ETC: 21:37 (0:02:10 remaining)
+Discovered open port 8443/tcp on 192.168.29.1
+Discovered open port 2872/tcp on 192.168.29.1
+Discovered open port 54321/tcp on 192.168.29.1
+SYN Stealth Scan Timing: About 46.03% done; ETC: 21:36 (0:01:12 remaining)
+SYN Stealth Scan Timing: About 75.09% done; ETC: 21:36 (0:00:30 remaining)
+Discovered open port 1900/tcp on 192.168.29.1
+Discovered open port 7443/tcp on 192.168.29.1
+Completed SYN Stealth Scan at 21:36, 115.93s elapsed (65535 total ports)
+Initiating Service scan at 21:36
+Scanning 9 services on reliance.reliance (192.168.29.1)
+Completed Service scan at 21:37, 94.86s elapsed (9 services on 1 host)
+Initiating OS detection (try #1) against reliance.reliance (192.168.29.1)
+Retrying OS detection (try #2) against reliance.reliance (192.168.29.1)
+Retrying OS detection (try #3) against reliance.reliance (192.168.29.1)
+Retrying OS detection (try #4) against reliance.reliance (192.168.29.1)
+Retrying OS detection (try #5) against reliance.reliance (192.168.29.1)
+NSE: Script scanning 192.168.29.1.
+Initiating NSE at 21:38
+Completed NSE at 21:38, 28.14s elapsed
+Initiating NSE at 21:38
+Completed NSE at 21:38, 3.08s elapsed
+Initiating NSE at 21:38
+Completed NSE at 21:38, 0.00s elapsed
+Nmap scan report for reliance.reliance (192.168.29.1)
+Host is up (0.0085s latency).
+Not shown: 65313 filtered tcp ports (no-response), 213 closed tcp ports (reset)
+PORT      STATE SERVICE             VERSION
+80/tcp    open  http                lighttpd
+|_http-server-header: Web Server
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: 955BF3F5D769035F6B81B5EE39B10019
+|_http-title: Jio Centrum Home Gateway : 
+443/tcp   open  ssl/http            lighttpd
+|_http-server-header: Web Server
+| ssl-cert: Subject: commonName=RILSELFCERT/organizationName=Reliance Jio Infocomm Limited
+| Issuer: commonName=RILSELFCERT/organizationName=Reliance Jio Infocomm Limited
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-04-27T05:58:13
+| Not valid after:  2032-04-24T05:58:13
+| MD5:     f518 e258 6237 6990 59cf 0827 9078 d9eb
+| SHA-1:   622d 1961 8ed4 3884 ec5d 0ce5 2418 ffb1 80b7 2302
+|_SHA-256: 3304 5e62 af09 2c9f dbac 060e 5f31 fcac ee36 cd68 07d0 e3a7 a204 ad24 e41e 6011
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Jio Centrum Home Gateway : 
+1900/tcp  open  upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: Linux UPnP/1.0 DLNADOC/1.50 AccessTwine/1.0-RAS Device/reliance.reliance
+|     Content-Length: 48
+|     Content-Type: text/html
+|     <HTML><BODY><H1>404 Not Found</H1></BODY></HTML>
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Server: Linux UPnP/1.0 DLNADOC/1.50 AccessTwine/1.0-RAS Device/reliance.reliance
+|     Content-Length: 57
+|     Content-Type: text/html
+|_    <HTML><BODY><H1>405 Method Not Allowed</H1></BODY></HTML>
+2872/tcp  open  upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: Linux UPnP/1.0 DLNADOC/1.50 AccessTwine/1.0-RAS Device/reliance.reliance
+|     Content-Length: 48
+|     Content-Type: text/html
+|     <HTML><BODY><H1>404 Not Found</H1></BODY></HTML>
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Server: Linux UPnP/1.0 DLNADOC/1.50 AccessTwine/1.0-RAS Device/reliance.reliance
+|     Content-Length: 57
+|     Content-Type: text/html
+|_    <HTML><BODY><H1>405 Method Not Allowed</H1></BODY></HTML>
+5068/tcp  open  ssl/sip             JCOW404/JUICEJFV-1.3.30 (Status: 200 OK)
+| fingerprint-strings: 
+|   SIPOptions: 
+|     SIP/2.0 200 OK
+|     Via: SIP/2.0/TCP nm;branch=foo;received=192.168.29.152
+|     Contact: <sip:192.168.29.1:5068;transport=tls>;video
+|     <sip:nm2@nm2>;tag=c6e9aa1d
+|     From: <sip:nm@nm>;tag=root
+|     Call-ID: 50000
+|     CSeq: 42 OPTIONS
+|     Accept: application/sdp, multipart/mixed, multipart/signed, multipart/alternative
+|     Accept-Language: en
+|     Allow: REGISTER, INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, SUBSCRIBE, UPDATE, PRACK, INFO
+|     Content-Type: application/sdp
+|     Supported: path, replaces, timer, norefersub
+|     User-Agent: JCOW404/JUICEJFV-1.3.30
+|     Content-Length: 1506
+|     3757745984 3757745984 IN IP6 2405:201:e05d:a000:d08f:f60a:5233:8926
+|     s=HGW session
+|     a=X-nat:0
+|     c=IN IP6 2405:201:e05d:a000:d08f:f60a:5233:8926
+|     m=audio 14566 RTP/AVP 104 103 101 102
+|     b=TIAS:24400
+|     b=AS:49
+|     b=RS:607
+|     b=RR:1816
+|     a=sendrecv
+|     a=rtpmap:104 AMR-WB/16000
+|     a=rtpmap:103 AMR/8000
+|_    a=rtpmap:101 telephone-event/8000
+| ssl-cert: Subject: commonName=jiofiber.local.html/organizationName=Jio Platforms Limited/stateOrProvinceName=KA/countryName=IN
+| Issuer: commonName=jiofiber.local.html/organizationName=Jio Platforms Limited/stateOrProvinceName=KA/countryName=IN
+| Public Key type: rsa
+| Public Key bits: 4096
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-22T04:56:50
+| Not valid after:  2121-10-29T04:56:50
+| MD5:     a019 7a21 48b4 29a2 e252 bf01 b35a ca7f
+| SHA-1:   2192 8072 a6f2 3814 73d8 c9ed b6c1 6b18 cfc8 b66e
+|_SHA-256: 8c4a 263f cb81 2b10 da81 13e0 9c00 bd83 05f2 142c 04e8 17c8 a6ef dbea b338 9d2e
+|_ssl-date: TLS randomness does not represent time
+7443/tcp  open  ssl/oracleas-https?
+| ssl-cert: Subject: commonName=jiofiber.local.html/organizationName=Jio Platforms Limited/stateOrProvinceName=KA/countryName=IN
+| Issuer: commonName=jiofiber.local.html/organizationName=Jio Platforms Limited/stateOrProvinceName=KA/countryName=IN
+| Public Key type: rsa
+| Public Key bits: 4096
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-22T04:56:50
+| Not valid after:  2121-10-29T04:56:50
+| MD5:     a019 7a21 48b4 29a2 e252 bf01 b35a ca7f
+| SHA-1:   2192 8072 a6f2 3814 73d8 c9ed b6c1 6b18 cfc8 b66e
+|_SHA-256: 8c4a 263f cb81 2b10 da81 13e0 9c00 bd83 05f2 142c 04e8 17c8 a6ef dbea b338 9d2e
+|_ssl-date: TLS randomness does not represent time
+8080/tcp  open  http-proxy          JCOW404/JUICEJFV-1.3.30
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 11
+|     Content-Type: text/html
+|     Connection: close
+|     Server: JCOW404/JUICEJFV-1.3.30
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 503 Service Unavailable
+|     Content-Length: 19
+|     Content-Type: text/html
+|     Connection: close
+|     Server: JCOW404/JUICEJFV-1.3.30
+|     Service Unavailable
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     Content-Length: 15
+|     Content-Type: text/html
+|     Connection: close
+|     Server: JCOW404/JUICEJFV-1.3.30
+|_    implemented
+|_http-server-header: JCOW404/JUICEJFV-1.3.30
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Supported Methods: GET
+8443/tcp  open  ssl/https-alt?
+| ssl-cert: Subject: commonName=jiofiber.local.html/organizationName=Jio Platforms Limited/stateOrProvinceName=KA/countryName=IN
+| Issuer: commonName=jiofiber.local.html/organizationName=Jio Platforms Limited/stateOrProvinceName=KA/countryName=IN
+| Public Key type: rsa
+| Public Key bits: 4096
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-22T04:56:50
+| Not valid after:  2121-10-29T04:56:50
+| MD5:     a019 7a21 48b4 29a2 e252 bf01 b35a ca7f
+| SHA-1:   2192 8072 a6f2 3814 73d8 c9ed b6c1 6b18 cfc8 b66e
+|_SHA-256: 8c4a 263f cb81 2b10 da81 13e0 9c00 bd83 05f2 142c 04e8 17c8 a6ef dbea b338 9d2e
+|_ssl-date: TLS randomness does not represent time
+54321/tcp open  unknown
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1900-TCP:V=7.97%I=7%D=8/4%Time=6890DA87%P=i686-pc-windows-windows%r
+SF:(GetRequest,C9,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20Linux\x2
+SF:0UPnP/1\.0\x20DLNADOC/1\.50\x20AccessTwine/1\.0-RAS\x20Device/reliance\
+SF:.reliance\r\nContent-Length:\x2048\r\nContent-Type:\x20text/html\r\n\r\
+SF:n<HTML><BODY><H1>404\x20Not\x20Found</H1></BODY></HTML>")%r(HTTPOptions
+SF:,DB,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nServer:\x20Linux\x
+SF:20UPnP/1\.0\x20DLNADOC/1\.50\x20AccessTwine/1\.0-RAS\x20Device/reliance
+SF:\.reliance\r\nContent-Length:\x2057\r\nContent-Type:\x20text/html\r\n\r
+SF:\n<HTML><BODY><H1>405\x20Method\x20Not\x20Allowed</H1></BODY></HTML>")%
+SF:r(FourOhFourRequest,C9,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20
+SF:Linux\x20UPnP/1\.0\x20DLNADOC/1\.50\x20AccessTwine/1\.0-RAS\x20Device/r
+SF:eliance\.reliance\r\nContent-Length:\x2048\r\nContent-Type:\x20text/htm
+SF:l\r\n\r\n<HTML><BODY><H1>404\x20Not\x20Found</H1></BODY></HTML>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2872-TCP:V=7.97%I=7%D=8/4%Time=6890DA8C%P=i686-pc-windows-windows%r
+SF:(GetRequest,C9,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20Linux\x2
+SF:0UPnP/1\.0\x20DLNADOC/1\.50\x20AccessTwine/1\.0-RAS\x20Device/reliance\
+SF:.reliance\r\nContent-Length:\x2048\r\nContent-Type:\x20text/html\r\n\r\
+SF:n<HTML><BODY><H1>404\x20Not\x20Found</H1></BODY></HTML>")%r(HTTPOptions
+SF:,DB,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nServer:\x20Linux\x
+SF:20UPnP/1\.0\x20DLNADOC/1\.50\x20AccessTwine/1\.0-RAS\x20Device/reliance
+SF:\.reliance\r\nContent-Length:\x2057\r\nContent-Type:\x20text/html\r\n\r
+SF:\n<HTML><BODY><H1>405\x20Method\x20Not\x20Allowed</H1></BODY></HTML>")%
+SF:r(FourOhFourRequest,C9,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20
+SF:Linux\x20UPnP/1\.0\x20DLNADOC/1\.50\x20AccessTwine/1\.0-RAS\x20Device/r
+SF:eliance\.reliance\r\nContent-Length:\x2048\r\nContent-Type:\x20text/htm
+SF:l\r\n\r\n<HTML><BODY><H1>404\x20Not\x20Found</H1></BODY></HTML>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5068-TCP:V=7.97%T=SSL%I=7%D=8/4%Time=6890DA93%P=i686-pc-windows-win
+SF:dows%r(GenericLines,2,"\r\n")%r(SIPOptions,813,"SIP/2\.0\x20200\x20OK\r
+SF:\nVia:\x20SIP/2\.0/TCP\x20nm;branch=foo;received=192\.168\.29\.152\r\nC
+SF:ontact:\x20<sip:192\.168\.29\.1:5068;transport=tls>;video\r\nTo:\x20<si
+SF:p:nm2@nm2>;tag=c6e9aa1d\r\nFrom:\x20<sip:nm@nm>;tag=root\r\nCall-ID:\x2
+SF:050000\r\nCSeq:\x2042\x20OPTIONS\r\nAccept:\x20application/sdp,\x20mult
+SF:ipart/mixed,\x20multipart/signed,\x20multipart/alternative\r\nAccept-La
+SF:nguage:\x20en\r\nAllow:\x20REGISTER,\x20INVITE,\x20ACK,\x20CANCEL,\x20O
+SF:PTIONS,\x20BYE,\x20REFER,\x20NOTIFY,\x20SUBSCRIBE,\x20UPDATE,\x20PRACK,
+SF:\x20INFO\r\nContent-Type:\x20application/sdp\r\nSupported:\x20path,\x20
+SF:replaces,\x20timer,\x20norefersub\r\nUser-Agent:\x20JCOW404/JUICEJFV-1\
+SF:.3\.30\r\nContent-Length:\x201506\r\n\r\nv=0\r\no=-\x203757745984\x2037
+SF:57745984\x20IN\x20IP6\x202405:201:e05d:a000:d08f:f60a:5233:8926\r\ns=HG
+SF:W\x20session\r\nt=0\x200\r\na=X-nat:0\r\nc=IN\x20IP6\x202405:201:e05d:a
+SF:000:d08f:f60a:5233:8926\r\nm=audio\x2014566\x20RTP/AVP\x20104\x20103\x2
+SF:0101\x20102\r\nb=TIAS:24400\r\nb=AS:49\r\nb=RS:607\r\nb=RR:1816\r\na=se
+SF:ndrecv\r\na=rtpmap:104\x20AMR-WB/16000\r\na=rtpmap:103\x20AMR/8000\r\na
+SF:=rtpmap:101\x20telephone-event/8000\r");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.97%I=7%D=8/4%Time=6890DA82%P=i686-pc-windows-windows%r
+SF:(GetRequest,98,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\nContent-L
+SF:ength:\x2019\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nS
+SF:erver:\x20JCOW404/JUICEJFV-1\.3\.30\r\n\r\nService\x20Unavailable")%r(H
+SF:TTPOptions,90,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nContent-Length
+SF::\x2015\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nServer
+SF::\x20JCOW404/JUICEJFV-1\.3\.30\r\n\r\nNot\x20implemented")%r(FourOhFour
+SF:Request,88,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2011
+SF:\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nServer:\x20JC
+SF:OW404/JUICEJFV-1\.3\.30\r\n\r\nBad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port54321-TCP:V=7.97%I=7%D=8/4%Time=6890DA85%P=i686-pc-windows-windows%
+SF:r(GenericLines,200,"\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0")%r(GetRequest,200,"
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0");
+MAC Address: F0:ED:B8:F1:2E:F6 (Servercom (India) Private Limited)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.97%E=4%D=8/4%OT=80%CT=1883%CU=39449%PV=Y%DS=1%DC=D%G=Y%M=F0EDB8
+OS:%TM=6890DB07%P=i686-pc-windows-windows)SEQ(SP=103%GCD=1%ISR=104%TI=Z%II=
+OS:I%TS=A)SEQ(SP=106%GCD=1%ISR=105%TI=Z%II=I%TS=A)SEQ(SP=106%GCD=1%ISR=108%
+OS:TI=Z%II=I%TS=A)SEQ(SP=106%GCD=1%ISR=109%TI=Z%TS=A)SEQ(SP=F6%GCD=1%ISR=10
+OS:7%TI=Z%TS=A)OPS(O1=M5B4ST11NW6%O2=M5B4ST11NW6%O3=M5B4NNT11NW6%O4=M5B4ST1
+OS:1NW6%O5=M5B4ST11NW6%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7
+OS:120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=
+OS:40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A
+OS:=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%R
+OS:ID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 3.195 days (since Fri Aug  1 16:57:24 2025)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   8.51 ms reliance.reliance (192.168.29.1)
+
+NSE: Script Post-scanning.
+Initiating NSE at 21:38
+Completed NSE at 21:38, 0.00s elapsed
+Initiating NSE at 21:38
+Completed NSE at 21:38, 0.00s elapsed
+Initiating NSE at 21:38
+Completed NSE at 21:38, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 255.63 seconds
+           Raw packets sent: 131025 (5.770MB) | Rcvd: 454 (23.375KB)
